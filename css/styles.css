@@ -52,7 +52,7 @@ img {
   text-decoration: none;
   color: inherit;
 
-  transition-property: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover,
@@ -158,17 +158,9 @@ img {
   fill: var(--accent-color);
 }
 
-/* .logo:hover {
-  text-decoration: underline;
-} */
-
 .header-contacts-list {
   color: var(--secondary-color);
 }
-/* .header-contacts-mail,
-.header-contacts-tel {
-  display: block;
-} */
 
 .logo-header,
 .logo-footer {
@@ -186,10 +178,11 @@ img {
 
 /* ГЕРОЙ */
 .hero {
-  /* margin: 0 auto; */
+  margin: 0 auto;
   padding-top: 200px;
   padding-bottom: 200px;
-  max-width: 100%;
+  max-width: 1600px;
+  height: 600px;
 
   background-color: var(--bgc-dark);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -215,7 +208,6 @@ img {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   /* text-align: center; */
-  /* background-color: tomato; */
 }
 .order-btn {
   display: inline-block;
@@ -238,7 +230,7 @@ img {
   cursor: pointer;
   font-family: inherit;
 
-  transition-property: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .order-btn:hover,
 .order-btn:focus {
@@ -262,14 +254,9 @@ img {
 .about {
   background-color: var(--bgc-light);
 }
-/* .skills {
-  padding-top: 94px;
-  padding-bottom: 94px;
-} */
 
 .skills-list {
   display: flex;
-  /* justify-content: space-between; ЯК ВАРІАНТ - ТОДІ ЗАБРАТИ МАРДЖИНИ У SKILLS-ITEM*/
 }
 
 .skills-item {
@@ -301,16 +288,11 @@ img {
   margin-top: 0;
   margin-bottom: 10px;
   color: var(--titles-color);
-  /* font-weight: 700;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.03em;
-  text-transform: uppercase; */
 }
 .skills-text {
   margin: 0;
   color: var(--secondary-color);
-  /* font-weight: 400; */
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -374,13 +356,12 @@ img {
 
 .about-item .item-title {
   /* text-align: center; */
+  margin: 0;
   color: var(--titles-light);
 }
 
 /* КОМАНДА */
 .team {
-  /* padding-top: 94px;
-  padding-bottom: 94px; */
   background-color: var(--bgc-medium);
 }
 .team-list {
@@ -393,7 +374,6 @@ img {
 }
 .team-item {
   /* flex-basis: 270px; чи потрібно задавати фіксовану ширину елемента списку якщо не задавати її через формулу?*/
-  /* padding-bottom: 30px; */
   background-color: var(--bgc-light);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
@@ -404,13 +384,8 @@ img {
   margin-right: 30px;
 }
 .team-text {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 32px;
 }
-
-/* .team-img {
-  margin-bottom: 30px;
-} */
 
 .team-member {
   margin-top: 0;
@@ -429,9 +404,6 @@ img {
   justify-content: center;
 }
 
-.team .socials-list {
-  padding: 0 32px;
-}
 .socials-item:not(:last-child) {
   margin-right: 10px;
 }
@@ -443,21 +415,19 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+}
+
+.team .socials-link {
+  background-color: var(--bgc-light);
+  color: var(--icon-primary);
 
   transition-property: background-color, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team .socials-link {
-  background-color: var(--bgc-light);
-  color: var(--icon-primary);
-}
-
 .socials-link:hover,
-.socials-link:focus,
-.page-footer .socials-link:hover,
-.page-footer .socials-link:focus {
+.socials-link:focus {
   background-color: var(--accent-color);
   color: var(--titles-light);
 }
@@ -564,15 +534,18 @@ img {
   letter-spacing: 0.03em;
 }
 
-/* .footer__socials-list {
-  display: flex;
-  justify-content: space-between;
-} */
-
 .page-footer .socials-link {
   background-color: var(--bgc-footer-socials);
   color: inherit;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.page-footer .socials-link:hover,
+.page-footer .socials-link:focus {
+  background-color: var(--accent-color);
+}
+
 /* БЕКДРОП І МОДАЛКА ЗАМОВЛЕННЯ */
 .backdrop {
   position: fixed;
@@ -722,11 +695,6 @@ img {
 .portfolio-cards-link:focus .portfolio__overlay {
   transform: translateY(-100%);
 }
-
-/* .portfolio-cards-link:hover,
-.portfolio-cards-link:focus {
-  text-decoration: underline;
-} */
 
 .cards-text {
   padding: 20px 24px;
